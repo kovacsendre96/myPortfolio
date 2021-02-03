@@ -14,7 +14,7 @@ const OtherSkills = () =>{
            <ImgWrapper> <img src={bookreader} alt="book reader" />
            <h3>Self-improvement</h3>
            </ImgWrapper>
-           <p>I want to develop myself in programming and the other areas that isn't related to it, such as English language, communication skills.
+           <p>I would like to develop myself in programming and the other areas that isn't related to it, such as English language, communication skills.
             I like to learn, and this is especially true when I learn what I like, what I care about, or what benefits to me.
            </p>
        </Card>
@@ -24,7 +24,7 @@ const OtherSkills = () =>{
            <ImgWrapper> <img src={teamplayer} alt="team play" />
            <h3>Team player</h3>
            </ImgWrapper>
-           <p>I have always liked to work in a team, and i can easily fit into a company. It gives me plus motivation, because i feel more responsibility than when I work alone. In a team I can learn more than when I work alone.</p>
+           <p>I have always liked to work in a team, and i can easily fit into a company. It gives me plus motivation, because I feel more responsibility than when I work alone. In a team I can learn to the others.</p>
 
        </Card>
 
