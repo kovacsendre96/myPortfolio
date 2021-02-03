@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/myPortfolio/static/js/main.96903cc9.chunk.js",
+    "main.js.map": "/myPortfolio/static/js/main.96903cc9.chunk.js.map",
+    "runtime-main.js": "/myPortfolio/static/js/runtime-main.07ecbdd6.js",
+    "runtime-main.js.map": "/myPortfolio/static/js/runtime-main.07ecbdd6.js.map",
+    "static/js/2.d0d0bd1f.chunk.js": "/myPortfolio/static/js/2.d0d0bd1f.chunk.js",
+    "static/js/2.d0d0bd1f.chunk.js.map": "/myPortfolio/static/js/2.d0d0bd1f.chunk.js.map",
+    "index.html": "/myPortfolio/index.html",
+    "static/js/2.d0d0bd1f.chunk.js.LICENSE.txt": "/myPortfolio/static/js/2.d0d0bd1f.chunk.js.LICENSE.txt",
+    "static/media/black-wallpaper-4.def360bf.jpg": "/myPortfolio/static/media/black-wallpaper-4.def360bf.jpg",
+    "static/media/blog.bfff1142.png": "/myPortfolio/static/media/blog.bfff1142.png",
+    "static/media/bonrow.fa423231.png": "/myPortfolio/static/media/bonrow.fa423231.png",
+    "static/media/bookreader.c53106b5.png": "/myPortfolio/static/media/bookreader.c53106b5.png",
+    "static/media/clock.8aa443f2.jpg": "/myPortfolio/static/media/clock.8aa443f2.jpg",
+    "static/media/css-logo.052a93e1.png": "/myPortfolio/static/media/css-logo.052a93e1.png",
+    "static/media/html5.33745ead.png": "/myPortfolio/static/media/html5.33745ead.png",
+    "static/media/motivate.87eb0a64.png": "/myPortfolio/static/media/motivate.87eb0a64.png",
+    "static/media/music.ca058256.jpg": "/myPortfolio/static/media/music.ca058256.jpg",
+    "static/media/profil.864dab2a.jpg": "/myPortfolio/static/media/profil.864dab2a.jpg",
+    "static/media/teamplayer.802eeb10.png": "/myPortfolio/static/media/teamplayer.802eeb10.png",
+    "static/media/todo.d5339b60.png": "/myPortfolio/static/media/todo.d5339b60.png",
+    "static/media/wedding.3a1a8f97.png": "/myPortfolio/static/media/wedding.3a1a8f97.png",
+    "static/media/whitesmoke.950736d6.png": "/myPortfolio/static/media/whitesmoke.950736d6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07ecbdd6.js",
+    "static/js/2.d0d0bd1f.chunk.js",
+    "static/js/main.96903cc9.chunk.js"
+  ]
+}
