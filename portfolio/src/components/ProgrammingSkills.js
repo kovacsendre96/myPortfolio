@@ -71,6 +71,7 @@ const Wrapper = styled.div`
     display:flex;
     margin: 80px auto 80px auto ;
     width:80%;
+ 
 
 
     @media screen and (max-width: 1200px) {
@@ -97,6 +98,7 @@ const Card = styled.div`
    transition:0.5s;
     &:hover{
    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+   transform:scale(1.1);
    }
 
 
@@ -112,7 +114,7 @@ const ImgWrapper = styled.div`
     
     
     img{
-        width:30%;
+        width:25%;
         
     }
 `;

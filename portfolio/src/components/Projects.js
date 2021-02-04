@@ -95,7 +95,7 @@ align-items:center;
 
 const Card = styled.div`
            @media screen and (max-width: 600px) {
-            width:70%;
+            width:805%;
         
   }
             a{
