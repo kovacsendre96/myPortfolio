@@ -75,13 +75,18 @@ const Card = styled.div`
    background:white;
    transition:0.5s;
    @media screen and (max-width: 600px) {
-       width:80%;
+       width:85%;
+      
        align-items:center;
+       
   }
 
 @media screen and (max-width: 900px) {
     
     align-self:center !important ;
+    p{
+        font-size:0.8rem;
+    }
 }
 
    &:hover{

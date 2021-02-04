@@ -1,8 +1,9 @@
 import React from 'react';
-import profile from "../img/profil.jpg";
+import profile from "../img/profil.png";
 import { titleAnim, head } from "./animations";
 import { motion } from "framer-motion";
 import {Head, Header__left, Header__right} from "./styles";
+
 
 
 const Header = () => {
@@ -20,12 +21,12 @@ const Header = () => {
         <Head>
 
             <Header__left
-                 variants={head} 
+                 variants={head}
                  initial="hidden"
                  animate="visible"
 
             >
-
+            
                 <motion.h2
                     variants={titleAnim}
                     
@@ -46,7 +47,14 @@ const Header = () => {
                     variants={titleAnim}
                     
 
-                >This is my portfolio
+                >This is 
+                </motion.h2>
+
+                <motion.h2
+                    variants={titleAnim}
+                    
+
+                >my page
                 </motion.h2>
 
             </Header__left>
@@ -54,8 +62,9 @@ const Header = () => {
 
 
             <Header__right>
-              
-                 <div  ><img  src={profile} alt="a picture about me" /></div> 
+              <img src={profile}/>
+             
+          
             </Header__right>
 
 

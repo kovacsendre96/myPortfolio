@@ -6,23 +6,23 @@ import blackWallpaper from "../img/black-wallpaper-4.jpg";
 
 
 
+
 export const Head = styled.div`
 
-
-background-image:url(${blackWallpaper});
-background-size:cover;
+width:100%;
 height: 100vh;
 display: flex;
 align-items: center;
-text-align:center;
-padding: 1rem 5rem;
+justify-content:center;
+background:url(${blackWallpaper}); 
+overflow:hidden;
 @media screen and (max-width: 900px) {
        flex-direction:column;
-       padding-top:50px;
-       height:110vh;
-      
-    
+
   }
+
+
+
 
 
 `;
@@ -31,10 +31,23 @@ padding: 1rem 5rem;
 
 
 export const Header__left = styled(motion.div)`
-flex: 1;
+
+width:50%;
+display: flex;
+align-items: center;
+justify-content:center;
+flex-direction:column;
+
+
+
 h2{
     color: #ffffff;
-}
+    @media screen and (max-width: 600px) {
+       font-size:1.3rem;
+} 
+ }
+  
+
 
 
 span{
@@ -44,28 +57,31 @@ span{
 `;
 
 
-export const Header__right =styled(motion.div)`
+export const Header__right = styled(motion.div)`
+
+width:50%;
+display: flex;
+align-items: center;
+justify-content:center;
+@media screen and (max-width: 900px) {
+        height:40%;
+} 
+
+ img{
+    width:100%;
+@media screen and (max-width: 900px) {
+        width:300px;
+} 
+ }
 
 
-flex: 1;
-overflow: hidden;
-
-
-img{
-width: 350px;
-border-radius:25px;
-filter: grayscale(100%);
-
-@media screen and (max-width: 1200px) {
-       width:280px;
-  }
-
-
-
-
-
-}
 `;
+
+
+
+
+
+
 
 export const Line = styled.div`
         width:70%;

@@ -44,7 +44,7 @@ const Heading=styled.h3`
   text-align:center;
   letter-spacing:1px;
   @media screen and (max-width: 900px) {
-        font-size:2rem;
+        font-size:1.5rem;
   }
 
 `;
