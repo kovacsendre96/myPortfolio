@@ -16,7 +16,7 @@ import {Line} from "./styles";
 const Projects = () =>{
 
 return(
-    <ProjectsStyle>
+    <ProjectsStyle id="projects">
 
         <h1>My projects</h1>
         <Line />

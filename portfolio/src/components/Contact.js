@@ -14,7 +14,7 @@ const Contact = () => {
 
     return (
         
-            <ContactStyle>
+            <ContactStyle id="contact">
                 <h1>Contact</h1>
                 <Line />
                 <UpWrapper>

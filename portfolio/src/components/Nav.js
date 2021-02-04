@@ -1,40 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {HashLink as Link} from "react-router-hash-link";
 
 
 
 const Nav =()=>{
 
 
-const ScrollHandler = ()=>{
-    window.scroll({
-        top: 700,
-        behavior: 'smooth'
-    })
-};
-
-const ScrollHandler2 = ()=>{
-    window.scroll({
-        top: 2900,
-        behavior: 'smooth'
-    })
-};
-
-const ScrollHandler3 = ()=>{
-    window.scroll({
-        top: 4500,
-        behavior: 'smooth'
-    })
-};
-
-
-
 return(
     <NavContainer>
-            <a onClick={ScrollHandler}>About</a>
-            <a onClick={ScrollHandler2} >Prjoects</a>
-            <a onClick={ScrollHandler3}>Contact</a>
+            <Link smooth to="#about">About</Link>
+            <Link smooth to="#projects">Prjoects</Link>
+            <Link smooth to="#contact">Contact</Link>
         </NavContainer>
 
 );
