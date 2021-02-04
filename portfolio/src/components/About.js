@@ -12,7 +12,8 @@ import {Line} from "./styles";
 const About = () =>{
 
 return(
-  <AboutSetting id="about"> 
+  <div id="about">
+  <AboutSetting > 
   <h1>About me</h1>
   <Line />
   <TimeLine />
@@ -22,6 +23,7 @@ return(
   <OtherSkills />
 
   </AboutSetting>
+  </div>
 
 );
 

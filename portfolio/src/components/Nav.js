@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {HashLink as Link} from "react-router-hash-link";
+import {Link} from "react-scroll"; 
+
 
 
 
@@ -9,9 +10,40 @@ const Nav =()=>{
 
 return(
     <NavContainer>
-            <Link smooth to="#about">About</Link>
-            <Link smooth to="#projects">Prjoects</Link>
-            <Link smooth to="#contact">Contact</Link>
+        <Link 
+        activeClass="active"
+        to="about"
+        spy="true"
+        smooth="true"
+        offset={-70}
+        duration={500}
+        >
+        About
+        </Link>
+
+        <Link 
+        activeClass="active"
+        to="projects"
+        spy="true"
+        smooth="true"
+        offset={-70}
+        duration={500}
+        >
+        Projects
+        </Link>
+
+        <Link 
+        activeClass="active"
+        to="contact"
+        spy="true"
+        smooth="true"
+        offset={-70}
+        duration={500}
+        >
+        Contact
+        </Link>
+
+            
         </NavContainer>
 
 );
