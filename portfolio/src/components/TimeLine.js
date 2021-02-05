@@ -146,7 +146,7 @@ const CircleWrapper = styled.div`
 
   &:hover{
   .icon{
-  transition:1s;
+  transition:1s  ease-out;
   transform:rotate(-720deg);
 
   }
@@ -155,7 +155,7 @@ const CircleWrapper = styled.div`
 
   }
   .icon3{
-  transition:1s;
+  transition:1s ease-out;
   transform:rotate(-540deg);
 
   }

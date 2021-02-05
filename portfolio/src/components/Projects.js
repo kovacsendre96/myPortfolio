@@ -107,20 +107,19 @@ const Card = styled.div`
 
    width:300px;
    height:220px;
- /*   border: 10px solid #329555;  */
    display:flex;
    flex-direction:column;
    justify-content:space-around;
    align-items:center;
    border-radius: 5px 25px 5px 25px;
    margin-bottom:10px;
-   margin:0 15px 15px 15px;
+   margin:15px 15px 15px 15px;
    transition:0.8s;
-   filter:grayscale(100%);
+ 
 
    &:hover{
     transform:scale(1.05);
-    filter:grayscale(0%);
+  
    }
    
 
@@ -135,6 +134,7 @@ const CardBottom = styled.div`
     align-items:center;
     color:#F6F6F6;
     border-radius:0 0 5px 25px; 
+   
 `;
 
 
