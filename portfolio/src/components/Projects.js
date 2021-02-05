@@ -45,9 +45,6 @@ return(
             <a href="https://kovacsendre96.github.io/toDoList//" target="blanc4" ></a> 
             </Card>
         
-            <Card style={{background:`url(${bonrow})`, backgroundSize:"cover"}}>
-            <a href="https://kovacsendre96.github.io/bonrow.html" target="blanc5" ></a> 
-            </Card>
 
 
             <Card style={{background:`url(${clock})`, backgroundSize:"cover"}}>
@@ -118,7 +115,7 @@ const Card = styled.div`
    filter:grayscale(100%);
 
    &:hover{
-    width:350px;
+    transform:scale(1.05);
     filter:grayscale(0%);
    }
    

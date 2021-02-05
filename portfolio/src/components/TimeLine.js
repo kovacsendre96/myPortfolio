@@ -76,7 +76,7 @@ const TimeLine = () => {
 
           <ContentContainer>
             <Heading>Future</Heading>
-            <p>Now I learn tha basic skills at home in a self-taught way, but in the future, I'd like to improve it, take it to a higher level, and I'd like to work on real projects. My dream is to find a job, where I can develop my programming skills, and get an appropriate knowledge to become a good Frontend developer.</p>
+            <p>Now I learn the basic skills at home in a self-taught way, but in the future, I'd like to improve it, take it to a higher level, and I'd like to work on real projects. My dream is to find a job, where I can develop my programming skills, and get an appropriate knowledge to become a good Frontend developer.</p>
           </ContentContainer>
 
         </CircleWrapper>
