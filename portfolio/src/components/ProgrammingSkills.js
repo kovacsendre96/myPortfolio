@@ -69,7 +69,7 @@ export default ProgrammingSkills;
 
 const Wrapper = styled.div`
     display:flex;
-    margin: 80px auto 80px auto ;
+    margin: 0 auto 0 auto ;
     width:80%;
  
 

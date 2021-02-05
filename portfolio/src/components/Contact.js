@@ -143,7 +143,8 @@ const DownIconWrapper = styled.div`
             transform:rotate(360deg);
             .icon{
                 color:#696969;
-                font-size:70px;
+                font-size:65px;
+               
             }   
      
         } 

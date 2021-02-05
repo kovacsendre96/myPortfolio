@@ -20,14 +20,11 @@ const TimeLine = () => {
     <div>
 
 
-      <AboutContainer>
+      <TimeLineContainer>
 
         <CircleWrapper>
 
-
-
-          <FontAwesomeIcon style={{ color: "#329555" }} size="5x" icon={faHistory} />
-
+          <FontAwesomeIcon className="icon" style={IconStyle} size="5x" icon={faHistory} />
 
 
           <ContentContainer>
@@ -45,7 +42,7 @@ const TimeLine = () => {
 
 
 
-          <FontAwesomeIcon style={{ color: "#329555" }} size="5x" icon={faClock} />
+          <FontAwesomeIcon className="icon2" style={IconStyle} size="5x" icon={faClock} />
 
 
 
@@ -69,7 +66,7 @@ const TimeLine = () => {
 
 
 
-          <FontAwesomeIcon style={{ color: "#329555",transform:"rotateY(180deg)" }} size="5x" icon={faHistory} />
+          <FontAwesomeIcon  className="icon3" style={{ color: "#329555",  }} size="5x" icon={faHistory} />
 
 
 
@@ -84,7 +81,7 @@ const TimeLine = () => {
 
 
 
-      </AboutContainer>
+      </TimeLineContainer>
 
 
 
@@ -101,15 +98,14 @@ export default TimeLine;
 
 
 
-const AboutContainer = styled.div`
-
-    padding-top:100px;
-    padding-bottom:100px;
+const TimeLineContainer = styled.div`
     display: flex;
     margin-left:auto;
     margin-right:auto;
     width:70%;
     justify-content:space-between;
+
+   
 
     @media screen and (max-width: 1200px) {
       width:100%;
@@ -130,6 +126,7 @@ const AboutContainer = styled.div`
 const ContentContainer = styled.div`
 
       width :300px;
+      padding-bottom:25px;
 
     `;
 
@@ -139,14 +136,48 @@ const CircleWrapper = styled.div`
   align-items:center;
   flex-direction:column;
 
+  .icon3{
+    transform:rotateZ(180deg);
+    
+  }
+
+  &:hover{
+  .icon{
+  transition:1s;
+  transform:rotate(-720deg);
+
+  }
+  .icon2{
+  transition:1s;
+  transform:translateY(-10px);
+
+  }
+  .icon3{
+  transition:1s;
+  transform:rotate(-540deg);
+
+  }
+  
+    
+  }
+
+
   
   `;
+
+  
 
 export const Heading = styled.h3`
   color:#329555;
   font-size:1.5rem;
   text-align:center;
   padding-bottom:20px;
+  
 `;
 
+
+const IconStyle ={
+  color:"#329555",
+ 
+}
 

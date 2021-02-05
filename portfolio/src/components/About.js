@@ -12,18 +12,23 @@ import {Line} from "./styles";
 const About = () =>{
 
 return(
-  <div id="about">
-  <AboutSetting > 
+  <>
+  <AboutSetting id="about" > 
+
   <h1>About me</h1>
   <Line />
   <TimeLine />
+  <SpaceBetweenContents />  
   <Heading>My programming skills</Heading>
+  <SpaceBetweenContents />  
   <ProgrammingSkills />
+  <SpaceBetweenContents />  
   <Heading>Other qualities that characterize me</Heading>
-  <OtherSkills />
 
+  <OtherSkills />
+<SpaceBetweenContents />  
   </AboutSetting>
-  </div>
+  </>
 
 );
 
@@ -40,12 +45,19 @@ const AboutSetting = styled.div`
 
 const Heading=styled.h3`
   font-size:2.5rem;
-  margin: 20px 0 20px 0;
   text-align:center;
   letter-spacing:1px;
   @media screen and (max-width: 900px) {
         font-size:1.5rem;
   }
+  @media screen and (max-width: 600px) {
+        font-size:1.2rem;
+  }
 
 `;
 
+const SpaceBetweenContents = styled.div`
+  width:100%;
+  height:80px;
+
+`;

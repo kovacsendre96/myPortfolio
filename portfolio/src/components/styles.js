@@ -87,5 +87,5 @@ export const Line = styled.div`
         width:70%;
         height:2px;
         background:#329555;
-        margin: 0px auto 20px auto;
+        margin: 20px auto 20px auto;
     `;

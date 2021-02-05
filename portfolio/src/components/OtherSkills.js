@@ -24,7 +24,7 @@ const OtherSkills = () =>{
            <ImgWrapper> <img src={teamplayer} alt="team play" />
            <h3>Team player</h3>
            </ImgWrapper>
-           <p>I have always liked to work in a team, and i can easily fit into a company. It gives me plus motivation, because I feel more responsibility than when I work alone. In a team I can learn to the others.</p>
+           <p>I have always liked to work in a team, and I can easily fit into a company. It gives me plus motivation, because I feel more responsibility than when I work alone. In a team I can learn to the others.</p>
 
        </Card>
 
