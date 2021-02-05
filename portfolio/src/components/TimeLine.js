@@ -140,6 +140,9 @@ const CircleWrapper = styled.div`
     transform:rotateZ(180deg);
     
   }
+  .icon2{
+    transition:0.7s;
+  }
 
   &:hover{
   .icon{
@@ -148,8 +151,7 @@ const CircleWrapper = styled.div`
 
   }
   .icon2{
-  transition:1s;
-  transform:translateY(-10px);
+  transform:scale(1.1);
 
   }
   .icon3{

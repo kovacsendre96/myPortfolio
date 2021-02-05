@@ -67,29 +67,22 @@ const UpWrapper = styled.div`
         a{
             text-decoration:none;
             width:300px;
-            
-        }
-        
-            .tel{
-                padding-right:10px;
-                transition:0.3s;
-                &:hover{
+            text-align:center;
+            &:hover{
+                .tel{
+
+         animation:call 0.5s linear  ;
          
-                animation:call 0.5s linear  ;
-                
-                @keyframes call {
-                    0%{transform:rotate(0deg);}
-                    50%{transform:rotate(30deg);}
-                    100%{transform:rotate(0deg);}
+         @keyframes call {
+             0%{transform:rotate(0deg);}
+             50%{transform:rotate(30deg);}
+             100%{transform:rotate(0deg);}
+         }
                 }
 
-            }
-        }
 
-            .mail{
-                padding-right:10px;
-                transition:0.3s;
-                &:hover{
+                .mail{
+                    
                     animation:call 0.5s linear  ;
                 
                 @keyframes call {
@@ -98,6 +91,22 @@ const UpWrapper = styled.div`
                     100%{transform:rotate(0deg);}
                 }
                 }
+                
+
+     }
+            
+        }
+        
+            .tel{
+                padding-right:10px;
+                transition:0.3s;
+         
+        }
+
+            .mail{
+                padding-right:10px;
+                transition:0.3s;
+             
             }
                 
             
@@ -134,7 +143,7 @@ const DownIconWrapper = styled.div`
             color:green;
             transition: 0.75s;
         }
-  
+     
 
        
 
@@ -143,7 +152,8 @@ const DownIconWrapper = styled.div`
             transform:rotate(360deg);
             .icon{
                 color:#696969;
-                font-size:65px;
+               
+                transform:scale(1.2)
                
             }   
      
