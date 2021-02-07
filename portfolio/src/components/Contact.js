@@ -109,12 +109,8 @@ const UpWrapper = styled.div`
              
             }
                 
-            
-        
         
     `;
-
-
 
 const DownWrapper = styled.div`
         display:flex;
@@ -144,23 +140,13 @@ const DownIconWrapper = styled.div`
             transition: 0.75s;
         }
      
-
-       
-
-       
         &:hover{
             transform:rotate(360deg);
             .icon{
                 color:#696969;
-               
                 transform:scale(1.2)
-               
-            }   
-     
-        } 
-
-
-      
+                }   
+        }  
     `;
 
     

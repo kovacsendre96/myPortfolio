@@ -18,7 +18,7 @@ h2{
     font-size: 4rem;
     padding: 1rem;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h6{
     font-family: 'Caudex', serif;
     color:#329555;
     text-transform:uppercase;

@@ -85,7 +85,7 @@ justify-content:center;
 
 export const Line = styled.div`
         width:70%;
-        height:2px;
+        height:3px;
         background:#329555;
         margin: 20px auto 20px auto;
     `;
