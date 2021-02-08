@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,10 +12,10 @@ const Nav = () => {
 
 
 
-    const ToggleHandler = () =>{
-         setToggle(!toggle);
-     };
-    
+    const ToggleHandler = () => {
+        setToggle(!toggle);
+    };
+
     return (
         <NavContainer>
             <MenuBar onClick={ToggleHandler}><FontAwesomeIcon icon={faBars} /> </MenuBar>
@@ -27,7 +27,10 @@ const Nav = () => {
                     smooth="true"
                     offset={-55}
                     duration={500}
-                    className={toggle?'nav-links':'nav-links-hide'}>
+                    className={toggle ? 'nav-links' : 'nav-links-hide'}
+                    onClick={ToggleHandler}
+                    >
+                    
                     About
                 </Link>
 
@@ -38,7 +41,8 @@ const Nav = () => {
                     smooth="true"
                     offset={-54}
                     duration={500}
-                    className={toggle?'nav-links':'nav-links-hide'}>
+                    className={toggle ? 'nav-links' : 'nav-links-hide'}
+                    onClick={ToggleHandler}>
                     Projects
                 </Link>
 
@@ -49,7 +53,8 @@ const Nav = () => {
                     smooth="true"
                     offset={-55}
                     duration={500}
-                    className={toggle?'nav-links':'nav-links-hide'}>
+                    className={toggle ? 'nav-links' : 'nav-links-hide'}
+                    onClick={ToggleHandler}>
                     Contact
                 </Link>
             </>
@@ -70,7 +75,7 @@ export default Nav;
 const NavContainer = styled.nav`
 display:flex;
 width:100%;
-background:rgba(50, 149, 85,0.9);
+background:rgb(50, 149, 85);
 align-items:center;
 justify-content:space-around;
 position:fixed;

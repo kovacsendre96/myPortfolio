@@ -129,6 +129,7 @@ padding-bottom:100px;
       .slick-prev:before,
 .slick-next:before {
   color: #329555;
+  
 }
   .slick-dots li.slick-active button:before {
     color:  #329555!important;
