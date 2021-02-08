@@ -130,6 +130,15 @@ padding-bottom:100px;
 .slick-next:before {
   color: #329555;
 }
+  .slick-dots li.slick-active button:before {
+    color:  #329555!important;
+}
+.slick-dots li button::before {
+    
+    color: white;
+    opacity:0.8;
+   
+  }
     }
     
 `;
