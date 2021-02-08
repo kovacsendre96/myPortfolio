@@ -164,8 +164,8 @@ const Card = styled.div`
    margin:15px auto 15px auto;
    transition:0.8s;
    @media screen and (max-width: 600px) {
-    width:280px;
-   height:190px;  
+    width:210px;
+    height:230px;  
   }
   
    &:hover{
