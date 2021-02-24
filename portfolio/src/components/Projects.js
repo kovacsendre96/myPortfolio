@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import blackWallpaper from "../img/black-wallpaper-4.jpg";
 import clock from '../img/clock.jpg';
 import wedding from '../img/wedding.png';
-import blog from '../img/blog.png';
 import music from '../img/music.jpg';
+import bonrow from '../img/bonrow.png';
 import todo from "../img/todo.png";
 import { Line } from "./styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -59,7 +59,7 @@ const Projects = () => {
             <Slider className='slider'{...settings}>
                 <Container>
 
-                    <Card style={{ background: `url(${music})`, backgroundSize: "cover", filter: "" }}>
+                    <Card style={{ background: `url(${music})`, backgroundSize: "contain", filter: "" }}>
                         <a href="https://kovacsendre96.github.io/music-player/" target="blanc" ></a>
                         <CardBottom> <h5>Music player</h5> <a href="https://github.com/kovacsendre96/react-todo" target="_blanc"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
                     </Card>
@@ -67,16 +67,16 @@ const Projects = () => {
                 </Container>
                 <Container>
 
-                    <Card style={{ background: `url(${wedding})`, backgroundSize: "cover" }}>
+                    <Card style={{ background: `url(${wedding})`, backgroundSize: "contain" }}>
                         <a href="https://kovacsendre96.github.io/my-components/wedding.html" target="blanc2" ></a>
                         <CardBottom> <h5>Wedding page</h5> <a href="https://github.com/kovacsendre96/my-components" target="_blanc2"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
                     </Card>
                 </Container>
 
                 <Container>
-                    <Card style={{ background: `url(${blog})`, backgroundSize: "cover" }}>
-                        <a href="https://sadap93.github.io/blog/" target="blanc3" ></a>
-                        <CardBottom> <h5>Blog</h5> <a href="https://github.com/kovacsendre96/blog" target="_blanc3"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
+                    <Card style={{ background: `url(${bonrow})`, backgroundSize: "cover", backgroundRepeat:"no-repeat" }}>
+                        <a href="https://kovacsendre96.github.io/bonrow/" target="blanc3" ></a>
+                        <CardBottom> <h5>Bonrow</h5> <a href="https://github.com/kovacsendre96/bonrow" target="_blanc3"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
                     </Card>
                 </Container>
 

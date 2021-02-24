@@ -115,22 +115,20 @@ const Container = styled.div`
       margin:0 auto 0 auto;
       position: relative;
       
-
-
-.slick-prev:before,
-.slick-next:before {
-  color: #329555;
-}
-.slick-dots li.slick-active button:before {
-    color:  #329555!important;
-}
-.slick-dots li button::before {
-    
-    color:#696981 ;
-    opacity:0.6;
-   
-  }
-    }
+            .slick-prev:before,
+            .slick-next:before {
+            color: #329555;
+            }
+            .slick-dots li.slick-active button:before {
+                color:  #329555!important;
+            }
+            .slick-dots li button::before {
+                
+                color:#696981 ;
+                opacity:0.6;
+            
+            }
+        }
 `;
 
 
