@@ -96,6 +96,7 @@ const ProgrammingSkills = () => {
                 </Wrapper>
 
             </Slider>
+            <p className="cv">If you are interested in my CV <a target="_blanc" href="https://drive.google.com/file/d/1xoh9RqX7BYyhr4hxMaatv1kciIqXBc0H/view?usp=sharing">click here</a> to download</p>
         </Container>
 
     );
@@ -128,6 +129,13 @@ const Container = styled.div`
                 opacity:0.6;
             
             }
+        }
+
+        .cv{
+            margin-top:35px;
+            text-align:center;
+            text-shadow:black;
+            width:auto;
         }
 `;
 
