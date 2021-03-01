@@ -136,6 +136,10 @@ const Container = styled.div`
             text-align:center;
             text-shadow:black;
             width:auto;
+
+            a{
+                color:#696981;
+            }
         }
 `;
 
