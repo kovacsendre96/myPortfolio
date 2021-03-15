@@ -1,57 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
-import bookreader from '../img/bookreader.png'; 
-import teamplayer from '../img/teamplayer.png'; 
-import motivate from '../img/motivate.png'; 
+import bookreader from '../img/bookreader.png';
+import teamplayer from '../img/teamplayer.png';
+import motivate from '../img/motivate.png';
+import { faBookReader, faUsers, faFistRaised } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const OtherSkills = () =>{
+const OtherSkills = () => {
 
-    return(
+    return (
 
-       <Container>
-       <Card style={{alignSelf:"flex-start"}}>
-           <ImgWrapper> <img src={bookreader} alt="book reader" />
-           <h3>Self-improvement</h3>
-           </ImgWrapper>
-           <p>I would like to develop myself in programming and the other areas that isn't related to it, such as English language, communication skills.
-            I like to learn, and this is especially true when I learn what I like, what I care about, or what benefits to me.
-           </p>
-       </Card>
+        <Container>
+            <Card>
+                <FontAwesomeIcon className="icon" icon={faBookReader} />
+                <h3>Self-improvement</h3>
+                <p>I am not satisfied with the knowledge I have, I always want to improve.</p>
+            </Card>
 
 
-       <Card style={{alignSelf:"center"}}>
-           <ImgWrapper> <img src={teamplayer} alt="team play" />
-           <h3>Team player</h3>
-           </ImgWrapper>
-           <p>I have always liked to work in a team, and I can easily fit into a company. It gives me plus motivation, because I feel more responsibility than when I work alone. In a team I can learn to the others.</p>
-
-       </Card>
+            <Card>
+                <FontAwesomeIcon className="icon" icon={faUsers} />
+                <h3>Team player</h3>
+                <p>I have always liked to work in a team, and I can easily fit into a company. Work in a team gives me plus motivation, because I feel more responsibility than when I work alone.</p>
+            </Card>
 
 
-       <Card style={{alignSelf:"flex-end"}}>
-           <ImgWrapper> <img src={motivate} alt="motivate" />
-           <h3>Motivate</h3>
-           </ImgWrapper>
-           <p>I want to complete every single step to reach my goal.
-The road is long, but it doesn’t hold me back.
-I am motivated and it gives me strength to be better every day.</p>
-
-       </Card>
-       </Container>
+            <Card >
+                <FontAwesomeIcon className="icon" icon={faFistRaised} />
+                <h3>Motivate</h3>
+                <p>I want to complete every single step to reach my goal.
+                The road is long, but it doesn’t hold me back. I am motivated and it gives me strength to be better every day.</p>
+            </Card>
+            
+        </Container>
+        
 
     );
 
 
 };
 
-const Container= styled.div`
+const Container = styled.div`
 
     display:flex;
     justify-content:space-around;
     width:70%;
     margin: 80px auto 0 auto ;
-    flex-direction:column;
+    flex-wrap:wrap;
     @media screen and (max-width: 1200px) {
         width:100%;
   }
@@ -64,60 +60,33 @@ const Container= styled.div`
 
 
 const Card = styled.div`
-   width:600px;
-   height:220px;
-   border: 1px solid black ;
+   margin:20px;
    display:flex;
-   justify-content:center;
+   width:200px;
+   flex-direction:column;
    align-items:center;
-   border-radius: 5px 25px 5px 25px;
-   margin-bottom:10px;
-   background:white;
-   transition:0.5s;
-   @media screen and (max-width: 600px) {
-       width:85%;
-      
-       align-items:center;
-       
+   text-align:center;
+       .icon{
+           border-radius:50%;
+           color:#F6F6F6;
+           background:#329555;
+           padding:10px;
+           width:70px;
+           height:70px;
+       }
+
+       h3{
+           font-size:1.2rem;
+           margin:10px;
+       }
+
+       @media screen and (max-width: 1200px) {
+        
   }
-
-@media screen and (max-width: 900px) {
-    
-    align-self:center !important ;
-    p{
-        font-size:0.8rem;
-    }
-}
-
-   &:hover{
-   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-   transform:scale(1.1);
-
-   }
-
-   img{
-       width:100%;
-       margin-bottom:10px;
-
-   }
-   
+ 
 
 `;
 
-const ImgWrapper = styled.div`
-    border-radius:50%;
-    object-fit:cover;
-    display:flex;
-    flex-direction:column;
-    margin-right:20px;
-    text-align:center;
-    @media screen and (max-width: 900px) {
-img{width:70%;
-}
-h3{
-    font-size:80%;
-}
-}
-`;
+
 
 export default OtherSkills;

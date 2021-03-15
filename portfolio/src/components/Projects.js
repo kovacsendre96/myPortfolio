@@ -6,6 +6,7 @@ import wedding from '../img/wedding.png';
 import music from '../img/music.jpg';
 import bonrow from '../img/bonrow.png';
 import todo from "../img/todo.png";
+import frigider from "../img/frigider.png";
 import { Line } from "./styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -91,6 +92,14 @@ const Projects = () => {
                     <Card style={{ background: `url(${clock})`, backgroundSize: "cover" }}>
                         <a href="https://kovacsendre96.github.io/clock/" target="blanc6" ></a>
                         <CardBottom> <h5>Clock</h5> <a href="https://github.com/kovacsendre96/clock" target="_blanc5"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
+                    </Card>
+
+                </Container>
+
+                <Container>
+                    <Card style={{ background: `url(${frigider})`, backgroundSize: "cover" }}>
+                        <a href="https://kovacsendre96.github.io/Frigider/" target="blanc7" ></a>
+                        <CardBottom> <h5>Frigider</h5> <a href="https://github.com/kovacsendre96/Frigider" target="_blanc5"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
                     </Card>
 
                 </Container>

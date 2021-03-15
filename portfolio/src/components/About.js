@@ -5,8 +5,8 @@ import OtherSkills from "./OtherSkills";
 import styled from 'styled-components';
 import whiteSmoke from '../img/whitesmoke.png';
 import {Line} from "./styles";
-
-
+import { Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const About = () =>{
@@ -26,10 +26,13 @@ return(
   <Heading>Other qualities that characterize me</Heading>
 
   <OtherSkills />
+  <Alert variant="info">
+  <Alert.Heading></Alert.Heading>
+  <p className="cv">If you are interested in my CV <a target="_blanc" href="https://drive.google.com/file/d/12x6KujviIN2OBgzLO2FSV6VggvP_Kths/view?usp=sharing">click here to view it in English</a> and <a target="_blanc2" href="https://drive.google.com/file/d/14LWWC16xwjgaiGJkApzUlYvI63fSqRGf/view?usp=sharing"> here to view it in Hungarian</a></p>
+  </Alert>
 <SpaceBetweenContents />  
   </AboutSetting>
   </>
-
 );
 
 };
@@ -40,6 +43,11 @@ export default About;
 
 const AboutSetting = styled.div`
   background:url(${whiteSmoke});
+  text-align:center;
+a{
+  text-decoration:underline;
+  color:#696969;
+}
 `;
 
 

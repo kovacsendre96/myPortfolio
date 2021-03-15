@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import Html from '../img/html5.png'
-import Css from '../img/css-logo.png'
-import Js from '../img/js.png';
+import { faReact, faJs, faHtml5, faCss3, faGithub,} from '@fortawesome/free-brands-svg-icons'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -18,14 +16,14 @@ const ProgrammingSkills = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
-        infinite: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    infinite: false,
                     dots: true
                 }
             },
@@ -34,14 +32,17 @@ const ProgrammingSkills = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    initialSlide: 2
+                    initialSlide: 2,
+                    infinite: false,
+                    
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: false,
                 }
             }
         ]
@@ -56,7 +57,7 @@ const ProgrammingSkills = () => {
 
                     <Card>
                         <ImgWrapper>
-                            <img src={Html} alt="html logo" />
+                            <FontAwesomeIcon style={{ color: '#E86229', fontSize: '4.5rem' }} icon={faHtml5} />
                         </ImgWrapper>
                         <Content>
                             <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} /> Basic Knowledge of HTML</p>
@@ -71,7 +72,7 @@ const ProgrammingSkills = () => {
                 <Wrapper>
                     <Card>
                         <ImgWrapper style={{ background: "#8cd7f7" }}>
-                            <img src={Css} alt="css logo" />
+                            <FontAwesomeIcon style={{ color: '#0396DE', fontSize: '4.5rem' }} icon={faCss3} />
                         </ImgWrapper>
                         <Content>
                             <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> Basic Knowledge of CSS</p>
@@ -83,20 +84,60 @@ const ProgrammingSkills = () => {
                 </Wrapper>
                 <Wrapper>
                     <Card>
-                        <ImgWrapper style={{ background: "#f2f268" }}>
-                            <img src={Js} alt="javascript logo" />
+                        <ImgWrapper style={{ background: "#ede28e" }}>
+                            <FontAwesomeIcon style={{ color: '#EFD81D', fontSize: '4.5rem' }} icon={faJs} />
                         </ImgWrapper>
                         <Content>
                             <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> Syntax and Basic Construct</p>
                             <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> DOM Manipulation with Vanilla JS and jQuery</p>
-                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> Basics of React.js</p>
                             <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> CSS in JS</p>
                         </Content>
                     </Card>
                 </Wrapper>
 
+                <Wrapper>
+                    <Card>
+                        <ImgWrapper style={{ background: "#222222" }}>
+                            <FontAwesomeIcon style={{ color: '#57D2F3', fontSize: '4.5rem' }} icon={faReact} />
+                        </ImgWrapper>
+                        <Content>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> JSX, Installing and use dependencies</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Create, manipulate and lifting components</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Styled-components, basics of Sass,framer-motion</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using hooks</p>
+                        </Content>
+                    </Card>
+                </Wrapper>
+
+                <Wrapper>
+                    <Card>
+                        <ImgWrapper style={{ background: "#201E1E" }}>
+                            <FontAwesomeIcon style={{ color: '#F7F7F7', fontSize: '4.5rem' }} icon={faGithub} />
+                        </ImgWrapper>
+                        <Content>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Create and fork repository</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Basic git commands</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Styled-components, basics of Sass,framer-motion,</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using commits, push and pull datas</p>
+                        </Content>
+                    </Card>
+                </Wrapper>
+
+                <Wrapper>
+                    <Card>
+                        <ImgWrapper style={{ background: "#450135" }}>
+                            <p style={{color:'#F75EEE',fontSize:"2rem"}}>Adobe Xd</p>
+                        </ImgWrapper>
+                        <Content>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Testing design ideas</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using it to implement a design</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Learn design principles, which makes me a better developer</p>
+                        </Content>
+                    </Card>
+                </Wrapper>
+
+
             </Slider>
-            <p className="cv">If you are interested in my CV <a target="_blanc" href="https://drive.google.com/file/d/1xoh9RqX7BYyhr4hxMaatv1kciIqXBc0H/view?usp=sharing">click here</a> to download</p>
         </Container>
 
     );
