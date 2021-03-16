@@ -2,24 +2,44 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Nav = () => {
+const Nav = ({ language, setLanguage }) => {
+
+
 
     const [toggle, setToggle] = useState(false);
+    const [toggleSettings, setToggleSettings] = useState(false);
 
 
+
+    const ToggleSettingsHandler = () => {
+        setToggleSettings(!toggleSettings);
+       
+    };
 
     const ToggleHandler = () => {
         setToggle(!toggle);
+        
+        
     };
 
     return (
         <NavContainer>
+            <div style={{display:'flex',justifyContent:'space-between',width:'100%',alignItems:'center'}}>
+            <div style={{display:'flex', color:'white',width:'120px',marginLeft:'20px'}}>
+            <FontAwesomeIcon className='icon' onClick={ToggleSettingsHandler} icon={faCog} size="2x" />
+                <div className={toggleSettings ? `settings` : `none`}>
+                    <button onClick={() =>{setLanguage(true);setToggleSettings(!toggleSettings);}  }>HUN</button>
+                    <button onClick={() => {setLanguage(false);  setToggleSettings(!toggleSettings);}} >ENG</button>
+                </div>
+            </div>
             <MenuBar onClick={ToggleHandler}><FontAwesomeIcon icon={faBars} /> </MenuBar>
-            <>
+
+            </div>
+            <div className='nav-links'>
                 <Link
                     activeClass="active"
                     to="about"
@@ -29,9 +49,12 @@ const Nav = () => {
                     duration={500}
                     className={toggle ? 'nav-links' : 'nav-links-hide'}
                     onClick={ToggleHandler}
-                    >
-                    
-                    About
+                >
+                    {
+                        language === false ?
+                            'About' : 'Rólam'
+                    }
+
                 </Link>
 
                 <Link
@@ -43,7 +66,10 @@ const Nav = () => {
                     duration={500}
                     className={toggle ? 'nav-links' : 'nav-links-hide'}
                     onClick={ToggleHandler}>
-                    Projects
+                    {
+                        language === false ?
+                            'Projects' : 'Projektek'
+                    }
                 </Link>
 
                 <Link
@@ -55,9 +81,12 @@ const Nav = () => {
                     duration={500}
                     className={toggle ? 'nav-links' : 'nav-links-hide'}
                     onClick={ToggleHandler}>
-                    Contact
+                    {
+                        language === false ?
+                            'Contact' : 'Kapcsolat'
+                    }
                 </Link>
-            </>
+            </div>
 
         </NavContainer>
 
@@ -86,6 +115,22 @@ z-index:1;
 
 }
 
+
+.none{
+    display:none;
+}
+
+.nav-links{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    @media screen and (max-width: 600px) {
+    flex-direction:column;
+    
+  
+  
+   }
+}
 
 
 a{
@@ -131,14 +176,18 @@ padding:10px 15px 10px 15px;
 
 const MenuBar = styled.a`
    display:none;
-   margin:0 -0.5% 0 auto;
    font-size:2.5rem !important;
+   
+   
+   
   
    
 
 
    @media screen and (max-width: 600px) {
     display:flex;
+    
+  
   
    }
 

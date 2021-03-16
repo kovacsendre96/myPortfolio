@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faJs, faHtml5, faCss3, faGithub,} from '@fortawesome/free-brands-svg-icons'
+import { faReact, faJs, faHtml5, faCss3, faGithub, } from '@fortawesome/free-brands-svg-icons'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
-const ProgrammingSkills = () => {
+const ProgrammingSkills = ({ language }) => {
 
     var settings = {
         dots: true,
@@ -34,7 +34,7 @@ const ProgrammingSkills = () => {
                     slidesToScroll: 1,
                     initialSlide: 2,
                     infinite: false,
-                    
+
                 }
             },
             {
@@ -60,9 +60,9 @@ const ProgrammingSkills = () => {
                             <FontAwesomeIcon style={{ color: '#E86229', fontSize: '4.5rem' }} icon={faHtml5} />
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} /> Basic Knowledge of HTML</p>
-                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} /> Structure construction</p>
-                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} /> Froms and Validation</p>
+                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} />{language === false ?' Basic Knowledge of HTML' : ' A HTML alapjai'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} />{language === false ?' Structure construction' : ' Struktúra építése'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#FFAFA0" }} icon={faCheck} />{language === false ?' Froms and Validation' : ' Űrlapk és validációk'}</p>
 
 
                         </Content>
@@ -75,10 +75,10 @@ const ProgrammingSkills = () => {
                             <FontAwesomeIcon style={{ color: '#0396DE', fontSize: '4.5rem' }} icon={faCss3} />
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> Basic Knowledge of CSS</p>
-                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> Responsive desing and Media Queries</p>
-                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> Floats Positioning</p>
-                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> CSS Grid, Flex Box</p>
+                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> {language === false ?' Basic Knowledge of CSS' : ' A CSS alapjai'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> {language === false ?' Responsive desing and Media Queries' : ' Reszponzív desing'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> {language === false ?' Floats Positioning' : ' Elemek pozícionálása'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#8CD7F7" }} icon={faCheck} /> {language === false ?' CSS Grid, Flex Box' : ' CSS Grid, Flex Box'}</p>
                         </Content>
                     </Card>
                 </Wrapper>
@@ -88,9 +88,9 @@ const ProgrammingSkills = () => {
                             <FontAwesomeIcon style={{ color: '#EFD81D', fontSize: '4.5rem' }} icon={faJs} />
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> Syntax and Basic Construct</p>
-                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> DOM Manipulation with Vanilla JS and jQuery</p>
-                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> CSS in JS</p>
+                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> {language === false ?' Syntax and Basic Construct' : ' Javascript szintaktika'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> {language === false ?' DOM Manipulation with Vanilla JS, React JS and jQuery' : ' A DOM manipulálása vanilla JS, react JS és jQuery segítségével'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#f2f268" }} icon={faCheck} /> {language === false ?' CSS in JS' : ' CSS írása, manipulálása Javascriptben'}</p>
                         </Content>
                     </Card>
                 </Wrapper>
@@ -101,10 +101,10 @@ const ProgrammingSkills = () => {
                             <FontAwesomeIcon style={{ color: '#57D2F3', fontSize: '4.5rem' }} icon={faReact} />
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> JSX, Installing and use dependencies</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Create, manipulate and lifting components</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Styled-components, basics of Sass,framer-motion</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using hooks</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' JSX, Installing and use dependencies' : ' Telepítés és használat, JSX ismerete'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Create, manipulate and lifting components' : ' Komponensek létrehozása, és props-ok átadása'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Styled-components, basics of Sass,framer-motion' : ' Styled-components, framer-motion, Sass alapjai,'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Using hooks' : ' Hook-ok használata'}</p>
                         </Content>
                     </Card>
                 </Wrapper>
@@ -115,10 +115,10 @@ const ProgrammingSkills = () => {
                             <FontAwesomeIcon style={{ color: '#F7F7F7', fontSize: '4.5rem' }} icon={faGithub} />
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Create and fork repository</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Basic git commands</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Styled-components, basics of Sass,framer-motion,</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using commits, push and pull datas</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Create and fork repository' : ' Repositorik létrehozása és másolása'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Basic git commands' : ' Gyakori git parancsok'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> {language === false ?' Using commits, push and pull datas' : ' Commitok használata, adatok fel-és letöltése'}</p>
+   
                         </Content>
                     </Card>
                 </Wrapper>
@@ -126,12 +126,12 @@ const ProgrammingSkills = () => {
                 <Wrapper>
                     <Card>
                         <ImgWrapper style={{ background: "#450135" }}>
-                            <p style={{color:'#F75EEE',fontSize:"2rem"}}>Adobe Xd</p>
+                            <p style={{ color: '#F75EEE', fontSize: "2rem" }}>Adobe Xd</p>
                         </ImgWrapper>
                         <Content>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Testing design ideas</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Using it to implement a design</p>
-                            <p> <FontAwesomeIcon style={{ color: "#222222" }} icon={faCheck} /> Learn design principles, which makes me a better developer</p>
+                            <p> <FontAwesomeIcon style={{ color: "#F75EEE" }} icon={faCheck} /> {language === false ?' Testing design ideas' : ' Design tervezés'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#F75EEE" }} icon={faCheck} /> {language === false ?' Using Adobe xD to implement a design' : ' A program használata egy design leprogramozásához'}</p>
+                            <p> <FontAwesomeIcon style={{ color: "#F75EEE" }} icon={faCheck} /> {language === false ?' Learning design principles, which makes me a better developer' : ' A tervezési elvek elsajátítása, amely jobb fejlesztővé tesz'}</p>
                         </Content>
                     </Card>
                 </Wrapper>
@@ -218,6 +218,7 @@ const Card = styled.div`
     border: 1px solid whitesmoke;
     border-radius: 20px;
    transition:0.5s;
+   text-align:start;
     &:hover{
    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
    transform:scale(1.05);

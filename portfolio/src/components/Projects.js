@@ -1,22 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import blackWallpaper from "../img/black-wallpaper-4.jpg";
 import clock from '../img/clock.jpg';
-import wedding from '../img/wedding.png';
+import wedding from '../img/wedding.jpg';
 import music from '../img/music.jpg';
-import bonrow from '../img/bonrow.png';
-import todo from "../img/todo.png";
-import frigider from "../img/frigider.png";
+import bonrow from '../img/bonrow.jpg';
+import todo from "../img/todo.jpg";
+import frigider from "../img/frigider.jpg";
 import { Line } from "./styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { Modal } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const Projects = ({language}) => {
+
+    const [show, setShow] = useState(false);
+
+    const [filter, setFilter] = useState();
+
+    const [info, setInfo] = useState([
+        {
+            title: 'Music player',
+            descriptionEng:'I have participated many online courses where I have acquired basics of React.js. That was my one of favourite learning project which I complemented with my own ideas.',
+            descriptionHun: 'Több online kurzuson vettem részt, ahol elsajátítottam a react.js alapjait. Ez volt az egyik kedvenc tanuló projektem, amelyet saját ötleteimmel is kiegészítettem.',
+            img: `${music}`,
+            link: 'https://kovacsendre96.github.io/music-player/',
+            githubLink: 'https://github.com/kovacsendre96/music-player',
+        },
+        {
+            title: 'Wedding page',
+            descriptionEng: 'That was the first time when I tested my knowledge and I tried to copy a demo page that has already been designed.',
+            descriptionHun:'Ennek az oldalnak a megalkotása volt az első alkalom, amikor egy már előre megtervezett design-t próbáltam lemásolni.',
+            img: `${wedding}`,
+            link: 'https://kovacsendre96.github.io/my-components/wedding.html',
+            githubLink: 'https://github.com/kovacsendre96/my-components',
+        },
+        {
+            title: 'Bonrow',
+            descriptionHun: 'Az egyik barátom megkért arra, hogy a zenekari bandájukról csináljak egy bemutatkozó oldalt. Ezt már React Js-ben csináltam meg, hogy gyakoroljam az eddig megszerzett tudásom. A kihívást a desgin megtervezése adta leginkább, amiben teljes szabadkezet kaptam.',
+            descriptionEng:'One of my friends asked me to make a webpage about their band. I created it with React.js to develope my knowledge. The page of design challenged me that I got free hand.',
+            img: `${bonrow}`,
+            link: 'https://kovacsendre96.github.io/bonrow/',
+            githubLink: 'https://github.com/kovacsendre96/bonrow',
+        },
+        {
+            title: 'Todo app',
+            descriptionHun: 'Sok fórumon és videóban találkoztam a To-do app-el, amit egy jó gyakorlási alapnak gondolok én is. A program megírása közben sok tapasztalatot szereztem. Később az app tovább fejlesztésén gondolkodva született meg a Frigider alkalmazás ötlete',
+            descriptionEng:'In many tutorials I met Todo apps. I think that is a good practice. When I created this app I got many expreience and I deepended my knowledge. Later, when I was thinking about further development, the idea of Frigider appplication was born.',
+            img: `${todo}`,
+            link: 'https://kovacsendre96.github.io/react-todo/',
+            githubLink: 'https://github.com/kovacsendre96/react-todo',
+        },
+        {
+            title: 'Clock',
+            descriptionHun: 'Sok különböző megvalósítással találkoztam, de tesztelni akartam magamat és végül teljesen önállóan készítettem el ezt az órát.',
+            descriptionEng:'I came across many different implementations, but I wanted to test myself and I made this clock completely on my own.',
+            img: `${clock}`,
+            link: 'https://kovacsendre96.github.io/clock/',
+            githubLink: 'https://github.com/kovacsendre96/clock',
+        },
+        {
+            title: 'Frigider',
+            descriptionHun:'Ez az app képviseli leginkább a jelenlegi tudásomat. A projectet jelenleg is fejlesztés alatt áll és még sok ötletem várja megvalósítását.'
+             +'Rövid bemutató:'
+           +'Az alkalmazás segítségével a felhasználó képes számon tartani és rendszerezni a hűtője tartalmát. Az űrlap kitöltéséhez szükség van többek között a berakás dátumára és szavatossági időre. Az adatok segítségével tudja az app az adott terméket kategóriába sorolni és kiszámolni, annak szavatosságát. Ezen kívül még a mennyiség megadása is szükséges, hogy a későbbiekben módosítható legyen.',
+            descriptionEng:'This app represents most of my current knowledge. The project is still under development and I have many more ideas waiting to be implemented.'
+           +'Short Introduction: The application allows the user to keep track of and organize the contents of their fridge. The form requires the quantities of food and the date of put in and guarantee. The app can categorize the products and calculate its warranty.',          
+
+            img: `${frigider}`,
+            link: 'https://kovacsendre96.github.io/Frigider/',
+            githubLink: 'https://github.com/kovacsendre96/Frigider',
+        }
+    ]);
 
 
 
-const Projects = () => {
+
 
 
     var settings = {
@@ -54,56 +119,55 @@ const Projects = () => {
 
 
         <ProjectsStyle id="projects">
-            <h1>My projects</h1>
+            <h1>{language === false ?'My projects' : 'Projektjeim'}</h1>
             <Line />
 
+
             <Slider className='slider'{...settings}>
-                <Container>
+                {info.map((infoItem) =>
 
-                    <Card style={{ background: `url(${music})`, backgroundSize: "contain", filter: "" }}>
-                        <a href="https://kovacsendre96.github.io/music-player/" target="blanc" ></a>
-                        <CardBottom> <h5>Music player</h5> <a href="https://github.com/kovacsendre96/react-todo" target="_blanc"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
+                    <Container>
 
-                </Container>
-                <Container>
+                        <Card onClick={() => {
+                            setShow(true);
+                            setFilter(info.filter((f) => f.title === infoItem.title));
+                        }} style={{ background: `url(${infoItem.img})`, backgroundSize: "cover", }}>
 
-                    <Card style={{ background: `url(${wedding})`, backgroundSize: "contain" }}>
-                        <a href="https://kovacsendre96.github.io/my-components/wedding.html" target="blanc2" ></a>
-                        <CardBottom> <h5>Wedding page</h5> <a href="https://github.com/kovacsendre96/my-components" target="_blanc2"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
-                </Container>
+                            <CardBottom> <h5>{infoItem.title}</h5>
+                            </CardBottom>
+                        </Card>
+                        {filter !== undefined &&
+                            <Modal
+                                show={show}
+                                onHide={() => setShow(false)}
+                                dialogClassName="modal-90w"
+                                aria-labelledby="example-custom-modal-styling-title"
+                                
+                            >
+                                <Modal.Header style={{background:'#329555'}} closeButton>
+                                    <Modal.Title  id="example-custom-modal-styling-title">
+                                        <p style={{color:'white'}}>{filter[0].title}</p>
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <img style={{width:'100%',margin:'15px 0px'}} src={`${filter[0].img}`}/>
+                                    <p>{language===false?filter[0].descriptionEng:filter[0].descriptionHun}</p>
+                                    <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
+                                    <a style={{color:'#329555'}} href={`${filter[0].link}`} target="blanc" >Demo Link <FontAwesomeIcon size="2x" icon={faDesktop} /></a>
+                                    <a style={{color:'#329555'}} href={`${filter[0].githubLink}`} target="_blanc">GitHub Link <FontAwesomeIcon size="2x" icon={faGithub} /></a>
+                                    </div>
 
-                <Container>
-                    <Card style={{ background: `url(${bonrow})`, backgroundSize: "cover", backgroundRepeat:"no-repeat" }}>
-                        <a href="https://kovacsendre96.github.io/bonrow/" target="blanc3" ></a>
-                        <CardBottom> <h5>Bonrow</h5> <a href="https://github.com/kovacsendre96/bonrow" target="_blanc3"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
-                </Container>
+                                </Modal.Body>
+                            </Modal>}
 
-                <Container>
-                    <Card style={{ background: `url(${todo})`, backgroundSize: "cover" }}>
-                        <a href="https://kovacsendre96.github.io/react-todo/" target="blanc4" ></a>
-                        <CardBottom> <h5>To do app</h5> <a href="https://github.com/kovacsendre96/react-todo" target="_blanc4"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
-                </Container>
+                    </Container>
 
-                <Container>
-                    <Card style={{ background: `url(${clock})`, backgroundSize: "cover" }}>
-                        <a href="https://kovacsendre96.github.io/clock/" target="blanc6" ></a>
-                        <CardBottom> <h5>Clock</h5> <a href="https://github.com/kovacsendre96/clock" target="_blanc5"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
-
-                </Container>
-
-                <Container>
-                    <Card style={{ background: `url(${frigider})`, backgroundSize: "cover" }}>
-                        <a href="https://kovacsendre96.github.io/Frigider/" target="blanc7" ></a>
-                        <CardBottom> <h5>Frigider</h5> <a href="https://github.com/kovacsendre96/Frigider" target="_blanc5"><FontAwesomeIcon size="2x" icon={faGithub} />Link</a></CardBottom>
-                    </Card>
-
-                </Container>
+                )}
             </Slider>
+
+
+
+
         </ProjectsStyle>
 
     );
@@ -160,23 +224,21 @@ margin: 0 auto 0 auto;
 justify-content:center;
 align-items:center;
 
+
 `;
 
 const Card = styled.div`
+
            @media screen and (max-width: 600px) {
             width:100%;  
   }
-            a{
-    width:100%;
-    height:100%;
-    text-decoration:none;
-            }   
   
-
+  
+   cursor:pointer;
    width:300px;
    height:220px;
    display:flex;
-   flex-direction:column;
+   flex-direction:column-reverse;
    align-items:center;
    border-radius: 5px 25px 5px 25px;
    margin-bottom:10px;
@@ -184,18 +246,13 @@ const Card = styled.div`
    transition:0.8s;
    @media screen and (max-width: 600px) {
     width:210px;
-    height:230px;  
+    height:230px; 
+    
+    
   }
   
    &:hover{
-    transform:scale(1.05);
-  
-            a{
-                opacity:1;
-                  
-            }
-         
-  
+    transform:scale(1.05);  
    }
    
 
@@ -209,20 +266,20 @@ const CardBottom = styled.div`
     justify-content:center;
     align-items:center;
     border-radius:0 0 5px 25px;
-   
-    a,h5{
+    
+    a,h5,span{
         color:#F6F6F6;
         align-self:center;
         width:50%;
         text-align:center; 
+        
      }
      a{
          padding:3px;
-         opacity:0;
-         transition:0.8s;
-         @media screen and (max-width: 900px) {
-            opacity:1;  
-  }
+
+     }
+     span{
+         cursor:pointer;
      }
 
     h5{
@@ -232,6 +289,7 @@ const CardBottom = styled.div`
         
     }
 
-    
+
    
 `;
+

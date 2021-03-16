@@ -2,11 +2,11 @@ import React from 'react';
 import profile from "../img/profil.png";
 import { titleAnim, head } from "./animations";
 import { motion } from "framer-motion";
-import {Head, Header__left, Header__right} from "./styles";
+import { Head, Header__left, Header__right } from "./styles";
 
 
 
-const Header = () => {
+const Header = ({ language, setLanguage }) => {
 
 
 
@@ -21,40 +21,56 @@ const Header = () => {
         <Head>
 
             <Header__left
-                 variants={head}
-                 initial="hidden"
-                 animate="visible"
+                variants={head}
+                initial="hidden"
+                animate="visible"
 
             >
-            
+
                 <motion.h2
                     variants={titleAnim}
-                    
 
-                >Welcome!
+
+                >{
+                        language === false ?
+                            'Welcome' : 'Üdvözölöm'
+                    }
                 </motion.h2>
 
 
                 <motion.h2
                     variants={titleAnim}
-                    
 
-                >I am <span>Endre</span>
+
+                >
+                    {
+                        language === false ?
+                       ' I am Endre': 'Endre vagyok'
+                    }
+
                 </motion.h2>
 
 
                 <motion.h2
                     variants={titleAnim}
-                    
 
-                >This is 
+
+                >
+                    {
+                        language === false ?
+                       ' This is': 'Ez az'
+                    }
                 </motion.h2>
 
                 <motion.h2
                     variants={titleAnim}
-                    
 
-                >my page
+
+                >
+                     {
+                        language === false ?
+                       ' Imy page': 'oldalam'
+                    }
                 </motion.h2>
 
             </Header__left>
@@ -62,9 +78,9 @@ const Header = () => {
 
 
             <Header__right>
-              <img src={profile}/>
-             
-          
+                <img src={profile} />
+
+
             </Header__right>
 
 

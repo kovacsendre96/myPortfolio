@@ -11,7 +11,7 @@ import emailjs from 'emailjs-com';
 
 
 
-const Contact = () => {
+const Contact = ({language}) => {
 
     const [send, setSend] = useState(false);
     const [name, setName] = useState();
@@ -66,13 +66,19 @@ const Contact = () => {
 
 
 
-                <h1>Contact</h1>
+                <h1>{
+                        language === false ?
+                       'Contact': 'Kapcsolat'
+                    }</h1>
                 <Line />
                 <UpWrapper>
 
                     <Form onSubmit={sendEmail}>
                         <div className="txt">
-                            <label for="name">Name*</label>
+                            <label for="name">{
+                        language === false ?
+                       'Name*': 'Név*'
+                    }</label>
                             <input onChange={NameHandler} name="name" id="name" type="name"></input>
 
 
@@ -82,12 +88,18 @@ const Contact = () => {
 
 
 
-                            <label for="message">Message*</label>
+                            <label for="message">{
+                        language === false ?
+                       'Message*': 'Üzenet*'
+                    }</label>
                             <input onChange={MessageHandler} name="message" id="message" type="message"></input>
                         </div>
                         <input className="button" type='submit' value='Send'></input>
                     </Form>
-                    <div className={send ? 'alert-message' : 'alert-message-hide'}>The message was sent successfully.</div>
+                    <div className={send ? 'alert-message' : 'alert-message-hide'}>{
+                        language === false ?
+                       'The message was sent successfully.': 'Az üzenet sikeresen el lett küldve.'
+                    }</div>
                     <Line />
                     <div className="icon-wrapper">
                         <a href="tel:+36706349277"><FontAwesomeIcon className="tel" style={{ color: "green", marginRight: "10px" }} size="3x" icon={faPhone} /> +36706349277</a>

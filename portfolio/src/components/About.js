@@ -4,36 +4,62 @@ import ProgrammingSkills from "./ProgrammingSkills";
 import OtherSkills from "./OtherSkills";
 import styled from 'styled-components';
 import whiteSmoke from '../img/whitesmoke.png';
-import {Line} from "./styles";
+import { Line } from "./styles";
 import { Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const About = () =>{
+const About = ({ language, setLanguage }) => {
 
-return(
-  <>
-  <AboutSetting id="about" > 
+  return (
+    <>
+      <AboutSetting id="about" >
 
-  <h1>About me</h1>
-  <Line />
-  <TimeLine />
-  <SpaceBetweenContents />  
-  <Heading>My programming skills</Heading>
-  <SpaceBetweenContents />  
-  <ProgrammingSkills />
-  <SpaceBetweenContents />  
-  <Heading>Other qualities that characterize me</Heading>
+        <h1> {
+          language === false ?
+            'About' : 'Rólam'
+        }</h1>
+        <Line />
+        <TimeLine 
+        language={language}
+        />
+        <SpaceBetweenContents />
+        <Heading> {
+          language === false ?
+            'My programming skills' : 'Programozási tudásom'
+        }</Heading>
+        <SpaceBetweenContents />
+        <ProgrammingSkills
+        language={language}
+        />
+        <SpaceBetweenContents />
+        <Heading>
+          {language === false ?
+            'Other qualities that characterize me' : 'Egyéb tulajdonságok, amelyek jellemeznek engem'
+          }
+        </Heading>
 
-  <OtherSkills />
-  <Alert variant="info">
-  <Alert.Heading></Alert.Heading>
-  <p className="cv">If you are interested in my CV <a target="_blanc" href="https://drive.google.com/file/d/12x6KujviIN2OBgzLO2FSV6VggvP_Kths/view?usp=sharing">click here to view it in English</a> and <a target="_blanc2" href="https://drive.google.com/file/d/14LWWC16xwjgaiGJkApzUlYvI63fSqRGf/view?usp=sharing"> here to view it in Hungarian</a></p>
-  </Alert>
-<SpaceBetweenContents />  
-  </AboutSetting>
-  </>
-);
+        <OtherSkills
+        language={language}
+        />
+        <Alert variant="info">
+          <Alert.Heading></Alert.Heading>
+          <p className="cv">
+            {language === false ?
+              'If you are interested in my CV' : 'Ha érdekel az önéletrajzom'
+            } <a target="_blanc" href="https://drive.google.com/file/d/12x6KujviIN2OBgzLO2FSV6VggvP_Kths/view?usp=sharing">
+              {language === false ?
+                'click here to view it in English' : 'kattints ide, hogy megtekintsd angolul'
+              }</a> {language === false ?
+                'and' : 'és'
+              } <a target="_blanc2" href="https://drive.google.com/file/d/14LWWC16xwjgaiGJkApzUlYvI63fSqRGf/view?usp=sharing"> {language === false ?
+              'here to view it in Hungarian !' : 'ide, hogy megtekintsd magyarul !'
+            }</a></p>
+        </Alert>
+        <SpaceBetweenContents />
+      </AboutSetting>
+    </>
+  );
 
 };
 
@@ -51,7 +77,7 @@ a{
 `;
 
 
-const Heading=styled.h3`
+const Heading = styled.h3`
   font-size:2.5rem;
   text-align:center;
   letter-spacing:1px;
