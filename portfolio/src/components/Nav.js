@@ -17,26 +17,26 @@ const Nav = ({ language, setLanguage }) => {
 
     const ToggleSettingsHandler = () => {
         setToggleSettings(!toggleSettings);
-       
+
     };
 
     const ToggleHandler = () => {
         setToggle(!toggle);
-        
-        
+
+
     };
 
     return (
         <NavContainer>
-            <div style={{display:'flex',justifyContent:'space-between',width:'100%',alignItems:'center'}}>
-            <div style={{display:'flex', color:'white',width:'120px',marginLeft:'20px'}}>
-            <FontAwesomeIcon className='icon' onClick={ToggleSettingsHandler} icon={faCog} size="2x" />
-                <div className={toggleSettings ? `settings` : `none`}>
-                    <button onClick={() =>{setLanguage(true);setToggleSettings(!toggleSettings);}  }>HUN</button>
-                    <button onClick={() => {setLanguage(false);  setToggleSettings(!toggleSettings);}} >ENG</button>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
+                <div style={{ display: 'flex', color: 'white', width: '120px', marginLeft: '20px' }}>
+                    <FontAwesomeIcon className='icon' onClick={ToggleSettingsHandler} icon={faCog} size="2x" />
+                    <div className={toggleSettings ? `settings` : `none`}>
+                        <button onClick={() => { setLanguage(true); setToggleSettings(!toggleSettings); }}>HUN</button>
+                        <button onClick={() => { setLanguage(false); setToggleSettings(!toggleSettings); }} >ENG</button>
+                    </div>
                 </div>
-            </div>
-            <MenuBar onClick={ToggleHandler}><FontAwesomeIcon icon={faBars} /> </MenuBar>
+                <MenuBar onClick={ToggleHandler}><FontAwesomeIcon icon={faBars} /> </MenuBar>
 
             </div>
             <div className='nav-links'>
@@ -170,7 +170,41 @@ padding:10px 15px 10px 15px;
     border-bottom:1px solid white;
     border-top:1px solid white;
 }
-   }     
+   }  
+
+   .icon{
+       cursor: pointer;
+       transition:0.2s;
+       &:active{
+           padding-top:2px;
+       }
+   }  
+
+      button{
+       width:auto;
+       height:auto;
+       border:0;
+       border-radius:2px;
+       cursor:pointer;
+       background-image:linear-gradient(#329555,#4cd37b);
+       text-shadow:1px 2px 5px rgba(0,0,0,0.5);
+       border-bottom:5px solid rgba(0,0,0,0.5);
+       border-top:2px solid rgba(255,255,255,.5);
+       color:#FDFDFD;
+       outline:none;
+       margin-left:5px;
+&:hover{
+background-image:linear-gradient(#21683a,#329555);
+}
+&:active{
+    background-image:linear-gradient(#329555,#21683a);
+    border-top:5px solid rgba(0,0,0,0.5);
+       border-bottom:2px solid rgba(255,255,255,.5);
+    
+}
+
+   }
+ 
 `;
 
 

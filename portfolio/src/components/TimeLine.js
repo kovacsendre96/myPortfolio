@@ -24,7 +24,7 @@ const TimeLine = ({ language, setLanguage }) => {
 
         <CircleWrapper>
 
-          <FontAwesomeIcon className="icon" style={IconStyle} size="5x" icon={faHistory} />
+          <FontAwesomeIcon className="icon" style={IconStyle}  icon={faHistory} />
 
 
           <ContentContainer>
@@ -47,7 +47,7 @@ const TimeLine = ({ language, setLanguage }) => {
 
 
 
-          <FontAwesomeIcon className="icon2" style={IconStyle} size="5x" icon={faClock} />
+          <FontAwesomeIcon className="icon2" style={IconStyle}  icon={faClock} />
 
 
 
@@ -71,7 +71,7 @@ const TimeLine = ({ language, setLanguage }) => {
 
 
 
-          <FontAwesomeIcon  className="icon3" style={{ color: "#329555",  }} size="5x" icon={faHistory} />
+          <FontAwesomeIcon  className="icon3" style={{ color: "#329555",  }}  icon={faHistory} />
 
 
 
@@ -144,6 +144,10 @@ const CircleWrapper = styled.div`
   display:flex;
   align-items:center;
   flex-direction:column;
+  .icon,.icon2,.icon3{
+    width:70px;
+    height:70px;
+  }
 
   .icon3{
     transform:rotateZ(180deg);

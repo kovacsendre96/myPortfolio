@@ -44,8 +44,12 @@ flex-direction:column;
 
 h2{
     color: #ffffff;
+    font-size:2.5rem;
+    @media screen and (max-width: 1200px) {
+       font-size:1.9rem;
+} 
     @media screen and (max-width: 600px) {
-       font-size:1.3rem;
+       font-size:0.9rem;
 } 
  }
   

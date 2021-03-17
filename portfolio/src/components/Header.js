@@ -45,7 +45,7 @@ const Header = ({ language, setLanguage }) => {
                 >
                     {
                         language === false ?
-                       ' I am Endre': 'Endre vagyok'
+                       ' I am Endre': 'Az oldalamon'
                     }
 
                 </motion.h2>
@@ -58,20 +58,11 @@ const Header = ({ language, setLanguage }) => {
                 >
                     {
                         language === false ?
-                       ' This is': 'Ez az'
+                       ' This is my page': 'Endre vagyok'
                     }
                 </motion.h2>
 
-                <motion.h2
-                    variants={titleAnim}
-
-
-                >
-                     {
-                        language === false ?
-                       ' Imy page': 'oldalam'
-                    }
-                </motion.h2>
+              
 
             </Header__left>
 

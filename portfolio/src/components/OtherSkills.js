@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import bookreader from '../img/bookreader.png';
-import teamplayer from '../img/teamplayer.png';
-import motivate from '../img/motivate.png';
 import { faBookReader, faUsers, faFistRaised } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

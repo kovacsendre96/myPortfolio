@@ -231,10 +231,12 @@ const Card = styled.div`
    @media screen and (max-width: 900px) {
     width:250px;
     height:350px;
+    font-size:0.8rem;
   }
    @media screen and (max-width: 600px) {
     width:220px;
     height:320px;
+    font-size:0.7rem;
   }
 `;
 
