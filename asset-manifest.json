@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/myPortfolio/static/js/main.ddf925d2.chunk.js",
-    "main.js.map": "/myPortfolio/static/js/main.ddf925d2.chunk.js.map",
+    "main.js": "/myPortfolio/static/js/main.204f521e.chunk.js",
+    "main.js.map": "/myPortfolio/static/js/main.204f521e.chunk.js.map",
     "runtime-main.js": "/myPortfolio/static/js/runtime-main.07ecbdd6.js",
     "runtime-main.js.map": "/myPortfolio/static/js/runtime-main.07ecbdd6.js.map",
     "static/css/2.a8dfbaeb.chunk.css": "/myPortfolio/static/css/2.a8dfbaeb.chunk.css",
@@ -12,14 +12,11 @@
     "static/js/2.d8103350.chunk.js.LICENSE.txt": "/myPortfolio/static/js/2.d8103350.chunk.js.LICENSE.txt",
     "static/media/black-wallpaper-4.def360bf.jpg": "/myPortfolio/static/media/black-wallpaper-4.def360bf.jpg",
     "static/media/bonrow.9c099b71.jpg": "/myPortfolio/static/media/bonrow.9c099b71.jpg",
-    "static/media/bookreader.c53106b5.png": "/myPortfolio/static/media/bookreader.c53106b5.png",
     "static/media/clock.63f9750f.jpg": "/myPortfolio/static/media/clock.63f9750f.jpg",
     "static/media/frigider.f763ee15.jpg": "/myPortfolio/static/media/frigider.f763ee15.jpg",
-    "static/media/motivate.87eb0a64.png": "/myPortfolio/static/media/motivate.87eb0a64.png",
     "static/media/music.cb125444.jpg": "/myPortfolio/static/media/music.cb125444.jpg",
     "static/media/profil.cd6f058c.png": "/myPortfolio/static/media/profil.cd6f058c.png",
     "static/media/slick-theme.css": "/myPortfolio/static/media/slick.c94f7671.ttf",
-    "static/media/teamplayer.802eeb10.png": "/myPortfolio/static/media/teamplayer.802eeb10.png",
     "static/media/todo.dcb8a7b2.jpg": "/myPortfolio/static/media/todo.dcb8a7b2.jpg",
     "static/media/wedding.0d8a21fd.jpg": "/myPortfolio/static/media/wedding.0d8a21fd.jpg",
     "static/media/whitesmoke.950736d6.png": "/myPortfolio/static/media/whitesmoke.950736d6.png"
@@ -28,6 +25,6 @@
     "static/js/runtime-main.07ecbdd6.js",
     "static/css/2.a8dfbaeb.chunk.css",
     "static/js/2.d8103350.chunk.js",
-    "static/js/main.ddf925d2.chunk.js"
+    "static/js/main.204f521e.chunk.js"
   ]
 }
