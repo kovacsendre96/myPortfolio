@@ -14,7 +14,8 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content:center;
-background:url(${blackWallpaper}); 
+
+background-image: radial-gradient(circle, #000000, #181818, #292929, #3c3c3c, #4f4f4f);
 overflow:hidden;
 @media screen and (max-width: 900px) {
        flex-direction:column;

@@ -145,11 +145,6 @@ padding:10px 15px 10px 15px;
 
 &:hover{
     background:#61bf77;
-    
-    
-   
-    
-
   
     cursor:pointer;
 

@@ -26,7 +26,7 @@ const About = ({ language, setLanguage }) => {
         <SpaceBetweenContents />
         <Heading> {
           language === false ?
-            'My programming skills' : 'Programozási tudásom'
+            'My programming skills' : 'Programozási ismeretek'
         }</Heading>
         <SpaceBetweenContents />
         <ProgrammingSkills
@@ -49,12 +49,20 @@ const About = ({ language, setLanguage }) => {
               'If you are interested in my CV' : 'Ha érdekel az önéletrajzom'
             } <a target="_blanc" href="https://drive.google.com/file/d/12x6KujviIN2OBgzLO2FSV6VggvP_Kths/view?usp=sharing">
               {language === false ?
-                'click here to view it in English' : 'kattints ide, hogy megtekintsd angolul'
-              }</a> {language === false ?
+                'click here' : 'kattints ide'  
+              }</a>
+              {language === false ?
+                ' to view it in english ' : ', hogy megtekintsd angolul,'  
+              }
+              
+               {language === false ?
                 'and' : 'és'
               } <a target="_blanc2" href="https://drive.google.com/file/d/14LWWC16xwjgaiGJkApzUlYvI63fSqRGf/view?usp=sharing"> {language === false ?
-              'here to view it in Hungarian !' : 'ide, hogy megtekintsd magyarul !'
-            }</a></p>
+              'here' : 'ide'
+            }</a>
+            {language === false ?
+                ' to view it in hungarian' : ', hogy megtekintsd magyarul'  
+              }</p>
         </Alert>
         <SpaceBetweenContents />
       </AboutSetting>
@@ -68,13 +76,16 @@ export default About;
 
 
 const AboutSetting = styled.div`
-  background:url(${whiteSmoke});
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
   text-align:center;
 a{
   text-decoration:underline;
   color:#696969;
 }
 `;
+
+
+
 
 
 const Heading = styled.h3`

@@ -134,7 +134,7 @@ export default Contact;
 
 const ContactStyle = styled.div`
 
-    background:url(${whiteSmoke});
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
     margin: 25px 0px;
     display:flex;
     justify-content:center;

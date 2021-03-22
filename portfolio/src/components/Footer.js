@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import blackWallpaper from "../img/black-wallpaper-4.jpg";
+
 
 
 
@@ -26,7 +26,7 @@ export default Footer;
 
 const FooterStyle = styled.div`
     width:100%;
-    background:url(${blackWallpaper});
+    background-image: radial-gradient(circle, #000000, #181818, #292929, #3c3c3c, #4f4f4f);
     background-size:cover;
     text-align:center;
     font-size:1.2rem;

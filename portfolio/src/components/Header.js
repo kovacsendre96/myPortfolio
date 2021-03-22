@@ -6,7 +6,7 @@ import { Head, Header__left, Header__right } from "./styles";
 
 
 
-const Header = ({ language, setLanguage }) => {
+const Header = ({ language }) => {
 
 
 

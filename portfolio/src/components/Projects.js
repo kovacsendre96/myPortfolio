@@ -183,7 +183,7 @@ export default Projects;
 
 
 const ProjectsStyle = styled.div`
-background:url(${blackWallpaper});
+background-image: radial-gradient(circle, #000000, #181818, #292929, #3c3c3c, #4f4f4f);
 background-size:cover;
 display:flex;
 flex-direction:column;
