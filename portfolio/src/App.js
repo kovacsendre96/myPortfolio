@@ -47,7 +47,7 @@ function App() {
         language={language}
         setLanguage={setLanguage}
       /> */}
-     <a style={{color:"black",fontSize:"3rem",textDecoration:"underline"}} href="www.kovacsendre.com">https://www.kovacsendre.com/</a>
+     <a target="_blank" style={{color:"black",fontSize:"3rem",textDecoration:"underline"}} href="https://www.kovacsendre.com">https://www.kovacsendre.com/</a>
     </div>
   );
 }
