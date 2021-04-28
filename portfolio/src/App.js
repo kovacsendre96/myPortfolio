@@ -18,8 +18,8 @@ function App() {
   const [language, setLanguage] = useState(false);
 
   return (
-    <div className="App">
-
+    <div style={{display:"flex",height:"100vh",justifyContent:"center",alignItems:"center"}} className="App">
+{/* 
       <GlobalStyle />
 
 
@@ -46,7 +46,8 @@ function App() {
       <Footer
         language={language}
         setLanguage={setLanguage}
-      />
+      /> */}
+     <a style={{color:"black",fontSize:"3rem",textDecoration:"underline"}} href="www.kovacsendre.com">https://www.kovacsendre.com/</a>
     </div>
   );
 }
